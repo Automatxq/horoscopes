@@ -117,7 +117,7 @@ def start_scheduler(app):
     def job():
         app.create_task(send_daily(app))
 
-    schedule.every().day.at("08:00").do(job)
+    schedule.every().day.at("23:40").do(job)
 
     while True:
         schedule.run_pending()
